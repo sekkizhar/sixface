@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action='' method="POST" enctype="multipart/form-data"/>
+{% csrf_token %}
+{{form.as_p}}
+<input type="submit" name="submit" value="submit"/>
+</form>
+
+<table border='1'>
+
+<th>STUDENTNAME</th>
+
+<th>STUDENTSEX</th>
+
+
+<th>STUDENTAGE</th>
+
+<th>STUDENTPHOTO</th>
+
+<th>STUDENTDATE</th>
+
+
+
+{% for studvalue in studview %}
+
+<td>{{studvalue.student_name}}</td>
+<td>{{studvalue.student_sex}}</td>
+<td>{{studvalue.student_age}}</td>
+<td>{{studvalue.student_Date}}</td>
+<td>{{studvalue.student_photo}}</td>
+
+</tr>
+
+{% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Employee Details</title>
+</head>
+<body>
+<a href="/home/">Home</a>
+
+<table border="1">
+<tr>
+<th>Empname</th>
+<th>EmpId</th>
+<th>Empsal</th>
+<th>Empphoto</th>
+<th>Empdate</th>
+</tr>
+{% for value in view1 %}
+<tr>
+<td>{{value.empname}}</td><br>
+<td>{{value.empId}}</td><br>
+<td>{{value.empsal}}</td><br>
+<td>{{value.empphoto}}</td><br> 
+<td>{{value.empdate}}</td><br>
+
+</tr>
+{% endfor %}
+
+</table>
+</body>
+</html>
